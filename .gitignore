@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# images
+/public/images/*
+
+# node modules
+node_modules/
+
+# MongoDB URI
+MONGODB_URI=mongodb://localhost:27017/technoDB

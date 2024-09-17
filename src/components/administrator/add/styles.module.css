@@ -1,0 +1,56 @@
+.addConteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.adminForm {
+  width: 30%;
+  min-height: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.adminProducts {
+  width: 70%;
+  min-height: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: black;
+  margin: 10px;
+}
+
+.form {
+  max-width: 90%;
+}
+
+.formgroup {
+  margin-bottom: 1rem;
+}
+
+.formcontrol {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+
+.btnprimary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btnprimary:hover {
+  color: #fff;
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

@@ -1,0 +1,20 @@
+.dumpConteiner {
+  height: 500px;
+
+}
+
+.dumpTitle {
+  width: 200px;
+  font-size: 50px;
+}
+
+.dumpAbout {
+  font-size: 20px;
+  width: 50%;
+
+
+}
+
+.dumpDesc {
+  padding-top: 20px;
+}
