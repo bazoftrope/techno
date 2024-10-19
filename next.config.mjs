@@ -14,7 +14,7 @@ const nextConfig = {
     }
     return config;
   },
-  // output: 'export',
+  output: 'static',
   async rewrites() {
     return [
       {
