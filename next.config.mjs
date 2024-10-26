@@ -1,27 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['localhost', '127.0.0.1'],
-    unoptimized: true,
-  },
-  webpack(config, { isServer }) {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
+  output: 'export',
+  webpack: (config) => {
+    config.resolve.fallback = {
+      fs: false,
+      path: false,
+      crypto: false,
+      stream: false,
+      zlib: false,
+      http: false,
+      https: false,
+      tls: false,
+      net: false,
+      child_process: false,
+    };
     return config;
-  },
-  output: 'static',
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*',
-      },
-    ];
   },
 };
 
