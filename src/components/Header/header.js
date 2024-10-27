@@ -24,8 +24,9 @@ const Header = () => {
         alt="ТехноГрупп" />
       <div className={styles.headerBtnConteiner}>
         {
-          heads.map(el =>
+          heads.map((el, i) =>
             <div
+              key={i}
               className={styles.header_btn}
               onClick={() => handleClick(el)}>{el}</div>
           )

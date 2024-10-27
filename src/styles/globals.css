@@ -8,13 +8,13 @@ body {
   /* Центрирует содержимое */
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Rubik Wet Paint';
   src: url('https://fonts.gstatic.com/lv1/libs/rubik/19.090/wght_400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   unicode-range: U+0400-045F, U+0490-055F, U+2DE0-2DFF, U+1C80-1CFB;
-}
+} */
 
 /* styles/Home.module.scss */
 .main-container {
@@ -32,7 +32,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../Image/1723134614110.jpg');
+  background-image: url('../Image/main.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.7;
