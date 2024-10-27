@@ -62,7 +62,14 @@ const Macadam = () => {
 
             <div className={styles.macadamPictname}>
 
-              <Image className={styles.macadamImg} src={require('../../../Image/' + content.name + '.jpg')} alt={content.name} />
+              <Image
+                className={styles.macadamImg}
+                src={`/Image/${content.name}.jpg`}
+                alt={content.name}
+                width={500}
+                height={300}
+
+              />
             </div>
 
           </div>

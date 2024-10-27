@@ -20,8 +20,12 @@ const Header = () => {
       <Image
         onClick={() => homeClick()}
         className={styles.headerLogo}
-        src={require('../../Image/logo.png')}
-        alt="ТехноГрупп" />
+        src="/Image/logo.png"
+        alt="ТехноГрупп"
+        width={500} // Укажите реальную ширину изображения
+        height={300}
+      />
+
       <div className={styles.headerBtnConteiner}>
         {
           heads.map((el, i) =>
