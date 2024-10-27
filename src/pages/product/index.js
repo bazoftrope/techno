@@ -1,14 +1,12 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Layout from '../../components/Layout/layout';
 import Macadam from '@/components/list/macadam/macadam';
 import Delivery from '@/components/list/delivery/delivery';
 import Dump from '@/components/list/dump/dump'
 import styles from './styled.module.css';
 
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 function ProductPage() {
   const router = useRouter();
@@ -32,7 +30,7 @@ function ProductPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div className={inter.className}>
+        <div>
           <Component />
         </div>
       </Layout>

@@ -8,6 +8,7 @@ import { data } from './data'
 const Macadam = () => {
   const Data = data
 
+
   const [visible, setVisible] = useState(false)
   const [content, setContent] = useState({})
 
@@ -15,55 +16,52 @@ const Macadam = () => {
     if (visible === false) setVisible(true)
   }
 
+  const macadamData = [
+    { label: "Насыпной коэффициент", value: content.coef },
+    { label: "Морозостойкость", value: content.freez },
+    { label: "Марка прочности", value: content.mark },
+    { label: "Порода", value: content.breed },
+    { label: "Цена", value: content.price }
+  ];
 
 
 
   return (
     <div className={styles.listConteiner}>
       <div className={styles.listBTN}>
+        {
+          Object.keys(Data).map(el =>
+            <div
+              className={styles.listElement}
+              onClick={() => { setVisible(true); setContent(Data[el]) }}
+            >
+              <div >{el}</div>
+            </div>
 
-        <div
-          className={styles.listElement}
-          onClick={() => { setVisible(true); setContent(Data['5-20']) }}
-        >
-          <div >5-20</div>
-        </div>
-        <div
-          className={styles.listElement}
-          onClick={() => { setVisible(true); setContent(Data['20-40']) }}
-        >
-          <div >20-40</div>
-        </div>
-        <div
-          className={styles.listElement}
-          onClick={() => { setVisible(true); setContent(Data['40-70']) }}
-        >
-          <div >40-70</div>
-        </div>
-        <div
-          className={styles.listElement}
-          onClick={() => { setVisible(true); setContent(Data['0-200']) }}
-        >
-          <div >0-200</div>
-        </div>
+          )
+        }
 
 
       </div>
       {visible ? (<div className={styles.macadamElementContent}>
         <div className={styles.MEC}>
           <div className={styles.macadamOptions}>
-
-            <div className={styles.macadamDesc}>
-
-              <div>насыпной коэфф-  {content.coef}</div>
-              <div>морозостойкость- {content.frost}</div>
-              <div>марка прочности- {content.mark}</div>
-              <div>порода- {content.breed}</div>
-              <div>цена- {content.price}</div>
+            <div className={styles.tableNameCont}>
+              <div className={styles.macadamTitle}>фракция {content.name}</div>
+              <table className={styles.macadam_table}>
+                <tbody>
+                  {macadamData.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.label}</td>
+                      <td>{item.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
 
             <div className={styles.macadamPictname}>
-              <div className={styles.macadamTitle}>фракция {content.name}</div>
+
               <Image className={styles.macadamImg} src={require('../../../Image/' + content.name + '.jpg')} alt={content.name} />
             </div>
 

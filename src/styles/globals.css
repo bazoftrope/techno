@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint:wght@400&display=swap');
+
 body {
   max-width: 1200px;
   margin: 0 auto;
+  /* font-family: 'Rubik Wet Paint', sans-serif; */
   font-family: Arial, Helvetica, sans-serif;
   /* Центрирует содержимое */
+}
+
+@font-face {
+  font-family: 'Rubik Wet Paint';
+  src: url('https://fonts.gstatic.com/lv1/libs/rubik/19.090/wght_400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0400-045F, U+0490-055F, U+2DE0-2DFF, U+1C80-1CFB;
 }
 
 /* styles/Home.module.scss */

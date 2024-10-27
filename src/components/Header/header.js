@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
-import styles from './styles.module.css'; // Измените путь согласно структуре вашего проекта
+import styles from './styles.module.css';
 
 const Header = () => {
-
+  const heads = ['щебень', 'доставка', 'самосвал']
 
   const router = useRouter();
   const handleClick = (category) => {
@@ -22,14 +22,15 @@ const Header = () => {
         className={styles.headerLogo}
         src={require('../../Image/logo.png')}
         alt="ТехноГрупп" />
-      <div
-        className={styles.header_btn}
-        onClick={() => handleClick('щебень')}>щебень</div>
-      <div
-        className={styles.header_btn}
-        onClick={() => handleClick('доставка')}>доставка</div>
-      <div className={styles.header_btn}
-        onClick={() => handleClick('самосвал')}>самосвал</div>
+      <div className={styles.headerBtnConteiner}>
+        {
+          heads.map(el =>
+            <div
+              className={styles.header_btn}
+              onClick={() => handleClick(el)}>{el}</div>
+          )
+        }
+      </div>
 
     </div>
   );
